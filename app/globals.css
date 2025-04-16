@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+html, body {
+  height: 100%;
+  background-color: #dadada; /* Change this to your preferred color */
+  color: #333; /* Text color */
+}
