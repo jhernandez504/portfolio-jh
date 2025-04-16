@@ -8,16 +8,16 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white dark:bg-slate-950 shadow-2xl">
+    <nav className="sticky top-0 z-50 shadow-white shadow-lg bg-black">
       <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between w-full">
           {/* Logo */}
-          <Link href="/" className="text-black dark:text-white text-3xl font-bold hover:text-gray-900 dark:hover:text-white transition-colors duration-200 hover:scale-120">
+          <Link href="/" className="text-black dark:text-white text-3xl font-bold hover:shadow-white hover:text-gray-900 dark:hover:text-white transition-colors duration-200 hover:scale-120">
             JH
           </Link>
 
           {/* Desktop Nav Links */}
-          <div className="hidden lg:flex items-center space-x-6 ttext-black dark:text-white">
+          <div className="hidden lg:flex justify-center w-full gap-12 text-black dark:text-white">
             <Link href="/about" className="hover:text-gray-900 dark:hover:text-white transition-colors duration-200 hover:scale-120">
               About
             </Link>
@@ -29,7 +29,7 @@ const Navbar = () => {
             </Link>
 
             {/* Social Icons */}
-            <div className="flex space-x-4 ml-4 text-2xl">
+            <div className="hidden lg:flex items-center space-x-4 text-2xl">
               <a href="https://github.com/jhernandez504" target="_blank" rel="noopener noreferrer">
                 <FaGithub className="hover:text-blue-600 dark:hover:text-blue-400 transition-transform duration-200 hover:scale-120" />
               </a>

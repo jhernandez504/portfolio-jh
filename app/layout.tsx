@@ -1,3 +1,4 @@
+
 import './globals.css'
 import Navbar from '@/components/Navbar'
 
@@ -13,9 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-black text-white">
+      <body className="flex flex-col bg-gradient-chaos min-h-screen h-full w-full text-white">
         <Navbar />
-        <main className="max-w-4xl mx-auto px-4 py-8 bg-inherit">{children}</main>
+        <main className="max-w-4xl mx-auto px-4 py-8 bg-inherit min-h-screen">{children}</main>
       </body>
     </html>
   )
