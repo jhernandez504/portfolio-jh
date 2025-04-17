@@ -10,7 +10,7 @@ export default function Projects() {
     "Event Horizon": (
       <>
         <p>01/2025</p>
-        <p className="text-yellow-300">An online spaceship battle themed card strategy game.</p>
+        <p className="text-yellow-500">An online spaceship battle themed card strategy game.</p>
         <p>
           Step into the vastness of space and command your fleet in this
           exhilarating online spaceship battle-themed card strategy game.
@@ -57,19 +57,19 @@ export default function Projects() {
     <div className="mb-4 pb-4">
       <div className="flex justify-center items-center overflow-x-auto whitespace-nowrap rounded-lg p-4 w-full max-w-4xl mx-auto mt-8 mb-8">
         <button
-          className={`inline-flex items-center h-12 px-4 py-2 text-sm text-gray-700 border-b-0 border-gray-300 sm:text-base dark:border-gray-500 rounded-t-md dark:text-white whitespace-nowrap focus:outline-none transition-transform duration-200 hover:scale-110 ${selectedProject === "Event Horizon" ? "bg-gray-300 dark:bg-gray-700" : "bg-white dark:bg-gray-800"}`}
+          className={`inline-flex items-center h-12 px-4 py-2 text-sm text-gray-700 border-b-0 shadow-white shadow-sm border-gray-300 sm:text-base dark:border-gray-500 rounded-t-md dark:text-white whitespace-nowrap focus:outline-none transition-transform duration-200 hover:scale-110 ${selectedProject === "Event Horizon" ? "bg-gray-300 dark:bg-gray-700 " : "bg-white dark:bg-gray-800"}`}
           onClick={() => setSelectedProject("Event Horizon")}
         >
           Event Horizon
         </button>
         <button
-          className={`inline-flex items-center h-12 px-4 py-2 text-sm rounded-t-md text-gray-700 border-b border-gray-300 sm:text-base dark:border-gray-500 dark:text-white whitespace-nowrap cursor-base focus:outline-none hover:border-gray-400 dark:hover:border-gray-300 transition-transform duration-200 hover:scale-110 ${selectedProject === "HTC Fitness" ? "bg-gray-300 dark:bg-gray-700" : "bg-white dark:bg-gray-800"}`}
+          className={`inline-flex items-center h-12 px-4 py-2 text-sm rounded-t-md text-gray-700 border-b shadow-white shadow-sm border-gray-300 sm:text-base dark:border-gray-500 dark:text-white whitespace-nowrap cursor-base focus:outline-none hover:border-gray-400 dark:hover:border-gray-300 transition-transform duration-200 hover:scale-110 ${selectedProject === "HTC Fitness" ? "bg-gray-300 dark:bg-gray-700" : "bg-white dark:bg-gray-800"}`}
           onClick={() => setSelectedProject("HTC Fitness")}
         >
           HTC Fitness
         </button>
         <button
-          className={`inline-flex items-center h-12 px-4 py-2 text-sm rounded-t-md text-gray-700 border-b border-gray-300 sm:text-base dark:border-gray-500 dark:text-white whitespace-nowrap cursor-base focus:outline-none hover:border-gray-400 dark:hover:border-gray-300 transition-transform duration-200 hover:scale-110 ${selectedProject === "Vitality" ? "bg-gray-300 dark:bg-gray-700" : "bg-white dark:bg-gray-800"}`}
+          className={`inline-flex items-center h-12 px-4 py-2 text-sm rounded-t-md text-gray-700 border-b shadow-white shadow-sm border-gray-300 sm:text-base dark:border-gray-500 dark:text-white whitespace-nowrap cursor-base focus:outline-none hover:border-gray-400 dark:hover:border-gray-300 transition-transform duration-200 hover:scale-110 ${selectedProject === "Vitality" ? "bg-gray-300 dark:bg-gray-700" : "bg-white dark:bg-gray-800"}`}
           onClick={() => setSelectedProject("Vitality")}
         >
           Vitality
@@ -77,7 +77,7 @@ export default function Projects() {
 
       </div>
 
-      <div className="p-4 mt-4 bg-white dark:bg-gray-900 rounded-lg shadow-md">
+      <div className="p-4 mt-4 bg-inherit rounded-lg shadow-md">
         {selectedProject ? (
           <div>
             <h2 className="text-xl text-center font-semibold text-gray-800 dark:text-white">{selectedProject}</h2>

@@ -8,7 +8,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 shadow-white shadow-lg bg-black">
+    <nav className="sticky top-0 z-50 shadow-gray-400 shadow-lg bg-white dark:bg-black opacity-100">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between w-full">
           {/* Logo */}
@@ -18,14 +18,17 @@ const Navbar = () => {
 
           {/* Desktop Nav Links */}
           <div className="hidden lg:flex justify-center w-full gap-12 text-black dark:text-white">
+            <Link href="/" className="hover:text-gray-900 dark:hover:text-white transition-colors duration-200 hover:scale-120">
+              home
+            </Link>
             <Link href="/about" className="hover:text-gray-900 dark:hover:text-white transition-colors duration-200 hover:scale-120">
-              About
+              about
             </Link>
             <Link href="/projects" className="hover:text-gray-900 dark:hover:text-white transition-colors duration-200 hover:scale-120">
-              Projects
+              projects
             </Link>
-            <Link href="/" className="hover:text-gray-900 dark:hover:text-white transition-colors duration-200 hover:scale-120">
-              Home
+            <Link href="https://docs.google.com/document/d/19Zy4uEAaRvMSY3OW7eU6h4_Ib9oJnvuB-Ew25i7NfZY/edit?usp=sharing" className="hover:text-gray-900 dark:hover:text-white transition-colors duration-200 hover:scale-120">
+              resume
             </Link>
 
             {/* Social Icons */}

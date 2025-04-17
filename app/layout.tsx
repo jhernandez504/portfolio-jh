@@ -1,6 +1,6 @@
-
 import './globals.css'
 import Navbar from '@/components/Navbar'
+import GradientWrapper from '../components/GradientWrapper';
 
 export const metadata = {
   title: "Jeremy's Portfolio",
@@ -14,9 +14,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="flex flex-col bg-gradient-chaos min-h-screen h-full w-full text-white">
-        <Navbar />
-        <main className="max-w-4xl mx-auto px-4 py-8 bg-inherit min-h-screen">{children}</main>
+      <body className="text-black dark:text-white">
+        <GradientWrapper>
+          <Navbar />
+          <main className="max-w-4xl mx-auto px-4 py-8 min-h-screen w-full">{children}</main>
+        </GradientWrapper>
       </body>
     </html>
   )
