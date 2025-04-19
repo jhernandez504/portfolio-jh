@@ -17,7 +17,7 @@ export default function RootLayout({
       <body className="text-black dark:text-white">
         <GradientWrapper>
           <Navbar />
-          <main className="max-w-4xl mx-auto px-4 py-8 min-h-screen w-full">{children}</main>
+          <main className="max-w-4xl mx-auto px-4 py-8 w-full">{children}</main>
         </GradientWrapper>
       </body>
     </html>
