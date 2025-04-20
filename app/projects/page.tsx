@@ -8,7 +8,7 @@ export default function Projects() {
   // Project details (you can replace this with actual project content)
   const projectDetails = {
     "Event Horizon": (
-      <>
+      <div>
         <p>01/2025</p>
         <p className="text-yellow-500">An online spaceship battle themed card strategy game.</p>
         <p>
@@ -37,19 +37,19 @@ export default function Projects() {
          <img
          src="/EHGameplay2.gif"
          />
-      </>
+      </div>
     ),
     "HTC Fitness": (
-      <>
+      <div>
       <p>12/2024</p>
       <p>A fitness tracking app with integration for gym routines.</p>
-      </>
+      </div>
     ),
     "Vitality": (
-      <>
+      <div>
       <p>11/2024</p>
       <p>A health app focused on fitness tracking and wellness.</p>
-      </>
+      </div>
     ),
   };
 
