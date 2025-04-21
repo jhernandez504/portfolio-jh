@@ -1,5 +1,6 @@
 "use client";
 import { useState } from 'react';
+import { FaGithub } from 'react-icons/fa';
 
 export default function Projects() {
   // State to track selected project
@@ -9,7 +10,10 @@ export default function Projects() {
   const projectDetails = {
     "Event Horizon": (
       <div>
-        <p>01/2025</p>
+        <p>01/2025</p> 
+          <a href="https://github.com/jhernandez504/event-horizon" className="flex justify-center items-center my-2" target="_blank" rel="noopener noreferrer">
+            <FaGithub className=" hover:text-blue-600 dark:hover:text-blue-400 scale-200 transition-transform duration-200 hover:scale-120" />
+          </a>
         <p className="text-yellow-500">An online spaceship battle themed card strategy game.</p>
         <p>
           Step into the vastness of space and command your fleet in this
@@ -44,12 +48,18 @@ export default function Projects() {
     "HTC Fitness": (
       <div>
         <p>12/2024</p>
+        <a href="https://github.com/jhernandez504/HTC-Fitness" className="flex justify-center items-center my-2" target="_blank" rel="noopener noreferrer">
+            <FaGithub className=" hover:text-blue-600 dark:hover:text-blue-400 scale-200 transition-transform duration-200 hover:scale-120" />
+          </a>
         <p>A fitness tracking app with integration for gym routines.</p>
       </div>
     ),
     "Vitality": (
       <div>
         <p>11/2024</p>
+        <a href="https://github.com/jhernandez504/fitness-tracker" className="flex justify-center items-center my-2" target="_blank" rel="noopener noreferrer">
+            <FaGithub className=" hover:text-blue-600 dark:hover:text-blue-400 scale-200 transition-transform duration-200 hover:scale-120" />
+          </a>
         <p>A health app focused on fitness tracking and wellness.</p>
       </div>
     ),
