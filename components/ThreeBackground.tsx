@@ -44,19 +44,44 @@ export default function ThreeBackground() {
     // Load GLTF model
     const loader = new GLTFLoader();
     loader.load('/models/scene.gltf', (gltf) => {
-      tesseract = gltf.scene;
-      tesseract.scale.set(1.25, 1.25, 1.25);
-      scene.add(tesseract);
+  tesseract = gltf.scene;
+  tesseract.scale.set(1.25, 1.25, 1.25);
+  scene.add(tesseract);
 
-      if (gltf.animations && gltf.animations.length > 0) {
-        mixer = new THREE.AnimationMixer(tesseract);
-        gltf.animations.forEach((clip) => {
-          const action = mixer.clipAction(clip);
-          action.setLoop(LoopRepeat, Infinity); // ensure continuous forward animation
-          action.play();
-        });
+  tesseract.traverse((child) => {
+    if ((child as THREE.Mesh).isMesh) {
+      const mesh = child as THREE.Mesh;
+      const material = mesh.material as THREE.MeshStandardMaterial;
+      console.log(child)
+
+      // Check if this is the inner cube object
+      if (mesh.name === 'Cube_01') {
+        // 🎯 THIS is the real inner cube object
+        material.color.set('#00FFFF'); // Cyan
+        material.metalness = 0.9;
+        material.roughness = 0.1;
+      } else {
+        // Outer tesseract stuff
+        material.color.set('#E5E4E2'); // Silver
+        material.metalness = 0.9;
+        material.roughness = 0.1;
       }
+
+      material.needsUpdate = true;
+    }
+  });
+
+  if (gltf.animations && gltf.animations.length > 0) {
+    mixer = new THREE.AnimationMixer(tesseract);
+    gltf.animations.forEach((clip) => {
+      const action = mixer.clipAction(clip);
+      action.setLoop(THREE.LoopRepeat, Infinity);
+      action.play();
     });
+  }
+});
+
+    
 
     const animate = () => {
       requestAnimationFrame(animate);
